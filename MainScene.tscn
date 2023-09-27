@@ -1,29 +1,28 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://c25qof7yq6xbr"]
 
-[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://cloud.tscn" type="PackedScene" id=2]
+[ext_resource type="PackedScene" uid="uid://bjph25ee3hico" path="res://cloud.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://b87owg87xw4h" path="res://Player/Player.tscn" id="2_ib7ie"]
 
 [node name="MainScene" type="Node2D"]
 
-[node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 500, 346 )
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_ib7ie")]
+position = Vector2(2, 1)
+scale = Vector2(0.4, 0.4)
 
-[node name="cloud" parent="." instance=ExtResource( 2 )]
-position = Vector2( 305, 423 )
-scale = Vector2( 0.5, 0.5 )
+[node name="cloud5" parent="." instance=ExtResource("2")]
+position = Vector2(208, 125)
 
-[node name="cloud2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 734, 428 )
-scale = Vector2( 0.5, 0.5 )
+[node name="cloud4" parent="." instance=ExtResource("2")]
+position = Vector2(1, 145)
 
-[node name="cloud3" parent="." instance=ExtResource( 2 )]
-position = Vector2( 521, 523 )
-scale = Vector2( 0.5, 0.5 )
+[node name="cloud6" parent="." instance=ExtResource("2")]
+position = Vector2(732, 184)
 
-[node name="cloud4" parent="." instance=ExtResource( 2 )]
-position = Vector2( 88, 323 )
-scale = Vector2( 0.5, 0.5 )
+[node name="cloud8" parent="." instance=ExtResource("2")]
+position = Vector2(607, 342)
 
-[node name="cloud5" parent="." instance=ExtResource( 2 )]
-position = Vector2( 949, 330 )
-scale = Vector2( 0.5, 0.5 )
+[node name="cloud9" parent="." instance=ExtResource("2")]
+position = Vector2(421, 476)
+
+[node name="cloud7" parent="." instance=ExtResource("2")]
+position = Vector2(422, 110)

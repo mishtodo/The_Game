@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://b87owg87xw4h"]
+
+[ext_resource type="Script" path="res://Player/Player.gd" id="1_tcgun"]
+[ext_resource type="Texture2D" uid="uid://bihg1i1jaa1jk" path="res://Sprites/chibi_1.png" id="2_bvwyb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tphy3"]
+size = Vector2(123.5, 214.5)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_tcgun")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(62.25, 106.75)
+shape = SubResource("RectangleShape2D_tphy3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(63, 110)
+scale = Vector2(0.310811, 0.310811)
+texture = ExtResource("2_bvwyb")
