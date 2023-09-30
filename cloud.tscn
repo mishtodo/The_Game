@@ -1,11 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://bjph25ee3hico"]
+[gd_scene load_steps=4 format=3 uid="uid://bjph25ee3hico"]
 
 [ext_resource type="Texture2D" uid="uid://blcl3sthkdnw0" path="res://Sprites/cloud_2.png" id="1"]
+[ext_resource type="Script" path="res://cloud.gd" id="1_ldqgc"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(170.75, 83)
 
 [node name="cloud" type="StaticBody2D"]
+script = ExtResource("1_ldqgc")
+metadata/flip_h = false
 
 [node name="Cloud2" type="Sprite2D" parent="."]
 position = Vector2(85, 50)

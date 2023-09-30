@@ -11,12 +11,15 @@ scale = Vector2(0.4, 0.4)
 
 [node name="cloud5" parent="." instance=ExtResource("2")]
 position = Vector2(208, 125)
+metadata/flip_h = true
 
 [node name="cloud4" parent="." instance=ExtResource("2")]
 position = Vector2(1, 145)
+metadata/flip_h = true
 
 [node name="cloud6" parent="." instance=ExtResource("2")]
 position = Vector2(732, 184)
+metadata/flip_h = true
 
 [node name="cloud8" parent="." instance=ExtResource("2")]
 position = Vector2(607, 342)
