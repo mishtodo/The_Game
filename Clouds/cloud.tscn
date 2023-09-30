@@ -7,11 +7,11 @@ size = Vector2(170.75, 83)
 
 [node name="cloud" type="StaticBody2D"]
 
-[node name="Cloud2" type="Sprite2D" parent="."]
-position = Vector2(85, 50)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("1")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(84.625, 58.5)
 shape = SubResource("1")
+
+[node name="Cloud2" type="Sprite2D" parent="."]
+position = Vector2(84, 49)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1")
