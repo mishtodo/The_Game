@@ -8,6 +8,11 @@
 [ext_resource type="PackedScene" uid="uid://2ra6ohn4vlxo" path="res://Star/star.tscn" id="5_cjcn5"]
 
 [sub_resource type="GDScript" id="GDScript_ph1oh"]
+script/source = "extends Timer
+
+func _on_timeout():
+	Global.stop_game()
+"
 
 [node name="MainScene" type="Node2D"]
 script = ExtResource("1_gnrlf")
@@ -71,41 +76,11 @@ position = Vector2(-727, 120)
 position = Vector2(102, 636)
 metadata/flip_h = true
 
-[node name="star3" parent="." instance=ExtResource("5_cjcn5")]
-position = Vector2(-206.25, 88)
-scale = Vector2(0.0625, 0.0625)
-
 [node name="star" parent="." instance=ExtResource("5_cjcn5")]
-position = Vector2(-298, 40)
-
-[node name="star2" parent="." instance=ExtResource("5_cjcn5")]
-position = Vector2(-646, 80)
-rotation = -2.21872
-
-[node name="star6" parent="." instance=ExtResource("5_cjcn5")]
-position = Vector2(176, 255)
-rotation = -2.21872
-
-[node name="star7" parent="." instance=ExtResource("5_cjcn5")]
-position = Vector2(-220, 412)
-rotation = -2.21872
-
-[node name="star8" parent="." instance=ExtResource("5_cjcn5")]
-position = Vector2(91, 527)
-rotation = -2.21872
-
-[node name="star4" parent="." instance=ExtResource("5_cjcn5")]
-position = Vector2(-315.102, -62.1254)
-rotation = -2.21872
-scale = Vector2(0.0625, 0.0625)
-
-[node name="star5" parent="." instance=ExtResource("5_cjcn5")]
-position = Vector2(-315.102, -62.1254)
-rotation = -2.21872
-scale = Vector2(0.0625, 0.0625)
+position = Vector2(367, 192)
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
 script = SubResource("GDScript_ph1oh")
 
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="Timer" method="_on_timeout"]
