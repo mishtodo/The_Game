@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://c25qof7yq6xbr"]
+[gd_scene load_steps=5 format=3 uid="uid://c25qof7yq6xbr"]
 
 [ext_resource type="Texture2D" uid="uid://db7no2jksl12q" path="res://Backgrounds/background3.jpg" id="1_si18p"]
 [ext_resource type="PackedScene" uid="uid://bjph25ee3hico" path="res://Clouds/cloud.tscn" id="2"]
 [ext_resource type="PackedScene" uid="uid://b87owg87xw4h" path="res://Player/Player.tscn" id="2_ib7ie"]
+[ext_resource type="PackedScene" uid="uid://d28mhrtxr7uuq" path="res://Clouds/rain_cloud.tscn" id="3_rp1r2"]
 
 [node name="MainScene" type="Node2D"]
 
@@ -15,12 +16,20 @@ texture = ExtResource("1_si18p")
 position = Vector2(-39, 75)
 
 [node name="cloud5" parent="." instance=ExtResource("2")]
-position = Vector2(118, 222)
+position = Vector2(279, 240)
 metadata/flip_h = true
 
 [node name="cloud6" parent="." instance=ExtResource("2")]
-position = Vector2(473, 219)
-metadata/flip_h = true
+position = Vector2(450, 294)
+
+[node name="rain_cloud" parent="." instance=ExtResource("3_rp1r2")]
+position = Vector2(-299, 160)
+
+[node name="rain_cloud2" parent="." instance=ExtResource("3_rp1r2")]
+position = Vector2(193, 354)
+
+[node name="rain_cloud3" parent="." instance=ExtResource("3_rp1r2")]
+position = Vector2(-249, 504)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_ib7ie")]
 position = Vector2(2, 1)
@@ -28,24 +37,31 @@ scale = Vector2(0.4, 0.4)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 
+[node name="rain_cloud4" parent="." instance=ExtResource("3_rp1r2")]
+position = Vector2(51, 621)
+
 [node name="cloud4" parent="." instance=ExtResource("2")]
 position = Vector2(-210, 33)
 metadata/flip_h = true
 
 [node name="cloud8" parent="." instance=ExtResource("2")]
 position = Vector2(-555, 37)
+metadata/flip_h = true
 
 [node name="cloud9" parent="." instance=ExtResource("2")]
-position = Vector2(-163, 471)
+position = Vector2(-178, 513)
+metadata/flip_h = true
 
 [node name="cloud7" parent="." instance=ExtResource("2")]
-position = Vector2(296, 132)
+position = Vector2(624, 242)
 
 [node name="cloud" parent="." instance=ExtResource("2")]
-position = Vector2(-339, 386)
+position = Vector2(-489, 399)
+metadata/flip_h = true
 
 [node name="cloud2" parent="." instance=ExtResource("2")]
-position = Vector2(-379, 123)
+position = Vector2(-727, 120)
 
 [node name="cloud3" parent="." instance=ExtResource("2")]
-position = Vector2(11, 557)
+position = Vector2(102, 636)
+metadata/flip_h = true
