@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://b87owg87xw4h"]
+[gd_scene load_steps=5 format=3 uid="uid://b87owg87xw4h"]
 
 [ext_resource type="Script" path="res://Player/Player.gd" id="1_tcgun"]
 [ext_resource type="Texture2D" uid="uid://bihg1i1jaa1jk" path="res://Sprites/chibi_1.png" id="2_bvwyb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tphy3"]
 size = Vector2(123.5, 214.5)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ljvgb"]
+blend_mode = 1
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_tcgun")
@@ -17,3 +20,9 @@ shape = SubResource("RectangleShape2D_tphy3")
 position = Vector2(63, 110)
 scale = Vector2(0.310811, 0.310811)
 texture = ExtResource("2_bvwyb")
+
+[node name="rain_cloud_check" type="RayCast2D" parent="."]
+material = SubResource("CanvasItemMaterial_ljvgb")
+position = Vector2(66, 50)
+target_position = Vector2(0, 200)
+collide_with_areas = true

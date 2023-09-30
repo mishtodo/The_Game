@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://d28mhrtxr7uuq"]
+[gd_scene load_steps=4 format=3 uid="uid://d28mhrtxr7uuq"]
 
+[ext_resource type="Script" path="res://Clouds/rain_cloud.gd" id="1_h0qew"]
 [ext_resource type="Texture2D" uid="uid://db2reqxt6d7db" path="res://Sprites/rain cloud.png" id="1_h5nbe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6wvub"]
 size = Vector2(168, 78)
 
 [node name="rain_cloud" type="StaticBody2D"]
+script = ExtResource("1_h0qew")
 
 [node name="RainCloud" type="Sprite2D" parent="."]
 scale = Vector2(0.1, 0.1)
